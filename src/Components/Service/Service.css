@@ -1,0 +1,382 @@
+/* src/components/Service/Service.css */
+.service-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6e1309 0%, #a14101 100%);
+  padding: 2rem 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.service-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(243, 156, 18, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(211, 84, 0, 0.1) 0%,
+      transparent 50%
+    );
+}
+
+.service-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Section */
+.service-hero {
+  padding: 2rem 0 3rem 0;
+}
+
+.service-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.service-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Search Card */
+.search-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.search-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.search-label {
+  color: #6e1309;
+  font-size: 1.1rem;
+}
+
+.search-input {
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #f39c12;
+  box-shadow: 0 0 0 0.2rem rgba(243, 156, 18, 0.25);
+}
+
+.search-btn {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+}
+
+.search-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+  background: linear-gradient(135deg, #e67e22, #f39c12);
+}
+
+.search-btn:disabled {
+  opacity: 0.7;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.3em;
+}
+
+/* Results Card */
+.results-card {
+  background: rgba(255, 255, 255, 0.98);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Code Header */
+.code-header-section {
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.code-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #6e1309;
+  margin: 0;
+}
+
+.severity-badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  margin-top: 0.5rem;
+}
+
+.code-actions .btn {
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Language Cards */
+.language-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.language-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.language-header {
+  background: linear-gradient(135deg, #6e1309, #a14101);
+  color: white;
+  font-weight: 700;
+  border-radius: 15px 15px 0 0 !important;
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+.flag {
+  margin-right: 0.5rem;
+}
+
+.language-card .card-body h5 {
+  color: #6e1309;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.language-card .card-body p {
+  color: #495057;
+  line-height: 1.6;
+}
+
+/* Causes & Solutions Cards */
+.cause-card,
+.solution-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.cause-card:hover,
+.solution-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cause-header {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  font-weight: 700;
+  border-radius: 15px 15px 0 0 !important;
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+.solution-header {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  color: white;
+  font-weight: 700;
+  border-radius: 15px 15px 0 0 !important;
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+.header-icon {
+  margin-right: 0.5rem;
+}
+
+.causes-list,
+.solutions-list {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.causes-list li,
+.solutions-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: #495057;
+}
+
+.causes-list li:last-child,
+.solutions-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Additional Info */
+.info-card {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 15px;
+}
+
+.info-card h6 {
+  color: white;
+  font-weight: 700;
+}
+
+/* Quick Codes */
+.quick-codes-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.quick-codes-card h5 {
+  color: #f39c12;
+  font-weight: 700;
+}
+
+.quick-code-btn {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.quick-code-btn:hover {
+  background: rgba(243, 156, 18, 0.2);
+  border-color: #f39c12;
+  transform: translateY(-2px);
+}
+
+/* Alerts */
+.alert {
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-title {
+    font-size: 2.2rem;
+  }
+
+  .service-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .search-card .card-body {
+    padding: 1.5rem !important;
+  }
+
+  .code-title {
+    font-size: 2rem;
+  }
+
+  .code-actions {
+    text-align: left !important;
+    margin-top: 1rem;
+  }
+
+  .language-card,
+  .cause-card,
+  .solution-card {
+    margin-bottom: 1rem;
+  }
+
+  .results-card .card-body {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-wrapper {
+    padding: 1rem 0;
+  }
+
+  .service-title {
+    font-size: 1.8rem;
+  }
+
+  .service-subtitle {
+    font-size: 1rem;
+  }
+
+  .search-input {
+    font-size: 1rem;
+  }
+
+  .search-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .code-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .service-wrapper {
+    background: white !important;
+  }
+
+  .search-card,
+  .quick-codes-card {
+    display: none;
+  }
+
+  .results-card {
+    box-shadow: none !important;
+    background: white !important;
+  }
+}

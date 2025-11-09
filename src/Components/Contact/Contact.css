@@ -1,0 +1,367 @@
+/* src/components/Contact/Contact.css */
+.contact-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6e1309 0%, #a14101 100%);
+  padding: 2rem 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.contact-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(243, 156, 18, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(211, 84, 0, 0.1) 0%,
+      transparent 50%
+    );
+}
+
+.contact-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Section */
+.contact-hero {
+  padding: 2rem 0 3rem 0;
+}
+
+.contact-badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #f39c12, #e67e22) !important;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Contact Methods Card */
+.contact-methods-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.methods-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6e1309;
+  margin-bottom: 0;
+}
+
+.methods-icon {
+  margin-right: 0.5rem;
+}
+
+.method-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 12px;
+  border-left: 4px solid #f39c12;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.method-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(243, 156, 18, 0.2);
+}
+
+.method-icon {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.method-content {
+  flex: 1;
+}
+
+.method-content h5 {
+  color: #6e1309;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.method-detail {
+  color: #f39c12;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.method-description {
+  color: #495057;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Social Media Section - Simplified Design */
+.social-section {
+  padding-top: 2rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.social-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #6e1309;
+  margin-bottom: 1.5rem;
+}
+
+.social-icon {
+  margin-right: 0.5rem;
+}
+
+.social-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.social-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.social-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: #6e1309;
+}
+
+.social-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #09136e;
+  border-radius: 8px;
+  margin-right: 1rem;
+  color: white;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.social-item:hover .social-icon-wrapper {
+  background: #a14101;
+  transform: scale(1.05);
+}
+
+.social-content {
+  flex: 1;
+}
+
+.social-content h5 {
+  color: #6e1309;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.social-description {
+  color: #6c757d;
+  line-height: 1.4;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.response-info {
+  padding-top: 1.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.response-badge {
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+}
+
+/* Questions Card */
+.questions-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.questions-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6e1309;
+  margin-bottom: 2rem;
+}
+
+.questions-icon {
+  margin-right: 0.5rem;
+}
+
+.question-item {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 12px;
+  border-left: 4px solid #3498db;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.question-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+}
+
+.question-item h5 {
+  color: #6e1309;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.question-item p {
+  color: #495057;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2.2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .methods-title,
+  .questions-title {
+    font-size: 1.6rem;
+  }
+
+  .social-title {
+    font-size: 1.4rem;
+  }
+
+  .method-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.2rem;
+  }
+
+  .method-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .social-item {
+    padding: 0.8rem 1rem;
+  }
+
+  .social-icon-wrapper {
+    width: 35px;
+    height: 35px;
+    margin-right: 0.8rem;
+  }
+
+  .social-content h5 {
+    font-size: 0.95rem;
+  }
+
+  .social-description {
+    font-size: 0.8rem;
+  }
+
+  .question-item {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-wrapper {
+    padding: 1rem 0;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+
+  .method-item {
+    padding: 1rem;
+  }
+
+  .social-item {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .social-icon-wrapper {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.7rem;
+  }
+
+  .social-icon-wrapper svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .response-badge {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .question-item {
+    padding: 1.2rem;
+  }
+}

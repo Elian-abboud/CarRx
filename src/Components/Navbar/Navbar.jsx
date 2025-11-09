@@ -3,6 +3,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Navbar as BSNavbar, Container, Nav } from "react-bootstrap";
 import "./Navbar.css";
+import logo from "../../../public/logo2.png";
 
 const Navbar = () => {
   return (
@@ -14,7 +15,7 @@ const Navbar = () => {
     >
       <Container>
         <BSNavbar.Brand as={Link} to="/" className="brand-logo">
-          <img src="/logo2.png" alt="CarRx Logo" className="logo-image" />
+          <img src={logo} alt="CarRx Logo" className="logo-image" />
         </BSNavbar.Brand>
 
         <BSNavbar.Toggle

@@ -1,27 +1,15 @@
 // src/components/Navbar/Navbar.jsx
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Navbar as BSNavbar, Container, Nav } from "react-bootstrap";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <BSNavbar
       expand="lg"
-      className={`custom-navbar ${scrolled ? "scrolled" : ""}`}
-      sticky="top"
+      className="custom-navbar fixed-navbar"
+      fixed="top"
       variant="light"
     >
       <Container>
